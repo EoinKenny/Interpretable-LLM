@@ -1,4 +1,5 @@
 # Dataset we're going to use
+https://huggingface.co/datasets/cerebras/SlimPajama-627B
 https://www.cerebras.net/blog/slimpajama-a-627b-token-cleaned-and-deduplicated-version-of-redpajama
 
 # Tutorial 
