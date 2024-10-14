@@ -3,4 +3,5 @@ saved_model/
 trash/
 weights/
 data/
-datasets/
+__pycache__/
+.ipynb_checkpoints/
