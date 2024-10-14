@@ -9,5 +9,6 @@ pip install transformers
 pip install pandas
 pip install accelerate
 pip install matplotlib
+pip install scikit-learn
 pip3 install jupyter
 python -m ipykernel install --user --name=llm_env
