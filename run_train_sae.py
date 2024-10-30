@@ -1,7 +1,6 @@
 import io
 import os
 import pandas as pd
-import zstandard as zst
 import json
 import torch
 import torch.nn as nn
@@ -9,35 +8,49 @@ import torch.optim as optim
 import matplotlib.pyplot as plt
 import time
 import shutil
+import zstandard as zst
+import torch.nn.functional as F
 
-from torch.cuda.amp import autocast
-from torch.nn.parallel import DataParallel
+from torch.cuda.amp import autocast, GradScaler
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 # Constants
-TEXT_BATCH_SIZE = 512
-TEXT_LEN = 128  # how much of each text document to use in training (just first 128 tokens here)
+TEXT_BATCH_SIZE = 16
+TEXT_LEN = 128
 LR = 1e-1
-L2 = 1e-8
 MIN_LR = 1e-5
 LR_STEP_RATE = 2
-LATENT_SIZE = 2048
-DEVICE ='cpu'# 'cuda' if torch.cuda.is_available() else 'cpu'
+LATENT_SIZE = 2304
+SAE_SCALING_FACTOR = 4
+DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 DATA_DIR = 'SlimPajama-627B'
-LAMBDA = 1.0  # sparsity loss scaling factor
+TRACK_WINDOW = 1000000
+K = 10
+K_AUX = 512
+ALPHA = 1. / 32  # Scaling factor for auxiliary loss
 
 
 def main():
-    # Initialize model and tokenizer
-    model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
-    tiny_llama = AutoModelForCausalLM.from_pretrained(model_name, device_map="cpu")
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-
+    access_token='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'
+    model_type = 'google/gemma-2-2b-it'
+    
+    tokenizer = AutoTokenizer.from_pretrained(model_type,
+                                              token=access_token)
+    model = AutoModelForCausalLM.from_pretrained(model_type,
+                                                device_map='auto',
+                                                token=access_token,
+                                                torch_dtype=torch.float16)
+    
     # Initialize SAE and optimizer
-    sae = SparseAutoEncoder()
-    optimizer = optim.Adam(sae.parameters(), lr=LR, weight_decay=L2)
+    sae = SparseAutoencoder(n_latents=int(SAE_SCALING_FACTOR*LATENT_SIZE), n_inputs=LATENT_SIZE, k=K, k_aux=K_AUX, track_window=TRACK_WINDOW)
+    sae.to(DEVICE)
+    # Don't convert to half precision here - keep in float32
+    optimizer = optim.Adam(sae.parameters(), lr=LR)
     lr_decay_factor = 0.9
+    
+    # Initialize gradient scaler
+    scaler = GradScaler()
 
     # Setup tracking
     sparsity_loss_data = []
@@ -47,6 +60,8 @@ def main():
     start_time = time.time()
 
     root_data_dir = os.path.join(DATA_DIR, 'train')
+
+    times = []
 
     for sub_dir in os.listdir(root_data_dir):
         sub_dir_path = os.path.join(root_data_dir, sub_dir)
@@ -66,48 +81,57 @@ def main():
             print(f"DF Shape: {df.shape}, Text batches: {num_text_batches}")
 
             for text_batch_idx in range(num_text_batches):
+                start_time = time.time()
+                
                 text_batch = text_data[text_batch_idx * TEXT_BATCH_SIZE: 
                                      (text_batch_idx + 1) * TEXT_BATCH_SIZE]
-
-                with torch.autocast(device_type=DEVICE):
-                    with torch.no_grad():
-                        input_ids = tokenizer(
-                            text_batch, 
-                            max_length=TEXT_LEN, 
-                            return_tensors="pt", 
-                            padding=True, 
-                            truncation=True
-                        ).input_ids
-                        
-                        # Get residual stream activations
-                        z = get_residual(tiny_llama, input_ids, layer_num=12)
-
-                    # Forward pass through SAE
-                    recon = sae(z)
-                    breakpoint()
-                    
-                    # Compute losses
-                    loss_r = L2Loss(recon, z)
-                    loss_s = L1Loss(sae.encoder(z)) * LAMBDA
+                
+                with torch.no_grad():                        
+                    residules, _ = get_residules(model, text_batch, tokenizer, 20)
+                
+                residules = residules[:, 1:, :]
+                residules = residules.reshape(-1, LATENT_SIZE)
+                residules = residules.to(DEVICE)  # Keep in FP32
+                
+                # Use autocast for forward pass
+                with torch.amp.autocast(device_type='cuda', dtype=torch.float16):
+                    recon, encoded = sae(residules)
+                    loss_r = L2Loss(recon, residules)
+                    loss_s = sae.aux_reconstruction(residules, recon) * ALPHA
                     loss = loss_s + loss_r
 
-                # Backward pass and optimization
-                loss.backward()
-                optimizer.step()
+                if torch.isnan(loss):
+                    print("NaN detected in loss!")
+                    print(count)
+                    print(f"Reconstruction loss: {loss_r}, Sparsity loss: {loss_s}")
+                    continue
+
+                # Scale loss and do backward pass
+                scaler.scale(loss).backward()
+                scaler.step(optimizer)
+                scaler.update()
                 optimizer.zero_grad()
 
                 # Track losses
-                sparsity_loss_data.append(loss_s.item())
-                reconstruction_loss_data.append(loss_r.item())
+                sparsity_loss = loss_s.item()
+                reconstruction_loss = loss_r.item()
                 
-                if count % 10 == 0:  # Plot every 10 iterations
-                    plot_loss(sparsity_loss_data, reconstruction_loss_data)
+                if not (torch.isnan(torch.tensor(sparsity_loss)) or torch.isnan(torch.tensor(reconstruction_loss))):
+                    sparsity_loss_data.append(sparsity_loss)
+                    reconstruction_loss_data.append(reconstruction_loss)
+                    
+                    if count % 10 == 0:
+                        plot_loss(sparsity_loss_data, reconstruction_loss_data)
                 
                 count += 1
+                times.append(time.time() - start_time  )
+                # print("Current batch:", count, " -- Avg Time:", sum(times)/len(times)  )
+                if count % 1000 == 0:
+                    torch.save(sae.state_dict(), f'weights/sae_{count}.pth')
+            
 
             file_count += 1
 
-            # Learning rate decay
             if file_count % LR_STEP_RATE == 0:
                 for param_group in optimizer.param_groups:
                     param_group['lr'] = max(
@@ -116,89 +140,141 @@ def main():
                     )
                 print(f"Learning rate updated to {optimizer.param_groups[0]['lr']}")
 
-            # Print metrics
             print(f"\nSparsity Loss: {sum(sparsity_loss_data[-50:]) / 50:.2f}")
             print(f"Reconstruction Loss: {sum(reconstruction_loss_data[-50:]) / 50:.2f}")
             print(f"Iteration: {count}, File: {file_path}")
             print(f"Time Elapsed: {time.time() - start_time:.2f}s")
 
-            # Save checkpoint
-            if count % 1000 == 0:
-                torch.save(sae.state_dict(), f'weights/sae_{count}.pth')
 
 
-class SparseAutoEncoder(nn.Module):
-    def __init__(self, input_size=2048, hidden_size=LATENT_SIZE):
+class SparseAutoencoder(nn.Module):
+    
+    def __init__(self, n_latents: int, n_inputs: int, k: int, k_aux: int, track_window: int = 10000) -> None:
         super().__init__()
-        self.encoder = nn.Sequential(
-            nn.Linear(input_size, hidden_size),
-            nn.ReLU()
-        )
-        self.decoder = nn.Linear(hidden_size, input_size)
+        self.pre_bias = nn.Parameter(torch.zeros(n_inputs))
+        self.encoder = nn.Linear(n_inputs, n_latents, bias=False)
+        self.latent_bias = nn.Parameter(torch.zeros(n_latents))
+        self.k = k
+        self.k_aux = k_aux
+        self.latents_org = None
+
+        # Initialize decoder weights as transpose of encoder weights
+        self.decoder = nn.Linear(n_latents, n_inputs, bias=False)
+        self.decoder.weight.data = self.encoder.weight.data.t()
+
+        # Track how long neurons have been inactive
+        self.track_window = track_window
+        self.activation_tracker = torch.zeros(n_latents, dtype=torch.long)  # Tracks inactivity for each neuron
+
+    def aux_reconstruction(self, x: torch.Tensor, recons: torch.Tensor) -> torch.Tensor:
+        """
+        Compute the auxiliary loss using the top-k_aux dead latents.
+        A neuron is considered dead if it hasn't activated for self.track_window iterations.
+        """
+
+        # Identify neurons that haven't activated for self.track_window iterations
+        dead_neurons = (self.activation_tracker >= self.track_window).nonzero(as_tuple=True)[0]
+
+        if dead_neurons.numel() == 0:
+            # If no dead neurons, return a loss of zero
+            return torch.tensor(0.0, device=x.device)
+
+        # Select the top-k_aux inactive neurons
+        topk_aux_neurons = dead_neurons[:self.k_aux] if dead_neurons.numel() > self.k_aux else dead_neurons
+
+        # Keep only the activations of these top-k_aux dead neurons in the latent vectors
+        dead_latents = torch.zeros_like(self.latents_org)
+        dead_latents[:, topk_aux_neurons] = self.latents_org[:, topk_aux_neurons]  # Retain only the selected dead neuron activations
+        dead_latents[:, topk_aux_neurons] = torch.exp(dead_latents[:, topk_aux_neurons])    
+
+        # Reconstruct using only the selected dead latents
+        dead_reconstruction = self.decode(dead_latents)
+
+        # Compute the main reconstruction error e = x - recons
+        error = x - recons
+
+        # Auxiliary reconstruction error using dead latents e_hat = dead_reconstruction
+        aux_error = error - dead_reconstruction
+
+        # Auxiliary loss: L_aux = ||e - e_hat||^2_2
+        aux_loss = torch.norm(aux_error, p=2) ** 2
+
+        # Ensure numerical stability by zeroing NaNs (if any)
+        if torch.isnan(aux_loss):
+            aux_loss = torch.tensor(0.0, device=x.device)
+
+        return aux_loss
+
+
+    def topk_activation(self, latents_org: torch.Tensor) -> torch.Tensor:
+        """
+        Get the top k activations in the latent vector
         
-        # Initialize weights using Xavier initialization
-        nn.init.xavier_uniform_(self.encoder[0].weight)
-        nn.init.xavier_uniform_(self.decoder.weight)
-        
-        self.to(DEVICE)
+        Also keep track of which neurons are firing or not
+        """
+        self.latents_org = latents_org.clone().detach()
+        latents = F.relu(latents_org)
+        topk = torch.topk(latents, self.k, dim=-1)
+        result = torch.zeros_like(latents)
+        result.scatter_(-1, topk.indices, topk.values)
+        with torch.no_grad():
+            self.activation_tracker += 1
+            non_zero_activations = torch.sum(result > 0, dim=0)
+            activated_idxs = non_zero_activations > 0
+            self.activation_tracker[activated_idxs==1] = 0
+        return result
+
+    def encode(self, x: torch.Tensor) -> torch.Tensor:
+        x = x - self.pre_bias
+        latents = self.encoder(x) + self.latent_bias
+        return latents
+
+    def decode(self, latents: torch.Tensor) -> torch.Tensor:
+        return self.decoder(latents) + self.pre_bias
+
+    def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
+        latents = self.encode(x)  
+        latents_topk = self.topk_activation(latents)
+        recons = self.decode(latents_topk)
+        return recons, latents
+
+def get_residules(model, sentences, tokenizer, layer_num):
+    inputs = tokenizer(sentences, return_tensors="pt", padding=True, truncation=True, max_length=TEXT_LEN)
     
-    def forward(self, x):
-        encoded = self.encoder(x)
-        decoded = self.decoder(encoded)
-        return decoded
-
-
-def get_residual(model, input_ids, layer_num=12):
-    """
-    Extract residual stream activations from the specified layer using hooks.
-    """
+    activations = []
     
-    residual_activations = []
-
-    def hook_fn(module, input, output):
-        residual_activations.append(output)
-
-    # Ensure the model's parameters are on the correct device (cuda:0 or cuda:1, etc.)
-    primary_device = next(model.parameters()).device
-
-    # Register the hook on the correct layer
-    hook_handle = model.model.layers[layer_num].register_forward_hook(hook_fn)
-
-    # Move input_ids to the primary device
-    input_ids = input_ids.to(primary_device)
-
-    # Forward pass
+    def get_activations(layer, input, output):
+        activations.append(output)
+    
+    layer = model.model.layers[layer_num]
+    hook = layer.register_forward_hook(get_activations)
+    
     with torch.no_grad():
-        model(input_ids)
+        outputs = model(**inputs.to(model.device), use_cache=False)
+    
+    hook.remove()
 
-    # Remove hook to avoid memory issues
-    hook_handle.remove()
-
-    # Extract the residual activations and move to the primary device
-    hidden_states = residual_activations[0].to(primary_device).reshape(-1, residual_activations[0].size(-1))
-
-    return hidden_states
-
-
+    logits = outputs[0]
+    residules = activations[0][0]
+    
+    return residules, logits
 
 
 def L1Loss(x):
-    """Compute L1 loss for sparsity."""
     return torch.mean(torch.abs(x))
 
 
 def L2Loss(x, y):
-    """Compute L2 loss for reconstruction."""
     return torch.mean((x - y) ** 2)
 
 
 def plot_loss(sparsity_losses, reconstruction_losses, save_path='plots/loss_plot.png'):
-    """Plot training losses."""
     plt.figure(figsize=(10, 5))
     plt.plot(sparsity_losses, label='Sparsity Loss', alpha=0.7)
     plt.plot(reconstruction_losses, label='Reconstruction Loss', alpha=0.7)
+    plt.yscale('log')  # Set y-axis to log scale
     plt.xlabel('Iteration')
-    plt.ylabel('Loss')
+    plt.ylabel('Loss (log scale)')
     plt.title('Training Losses')
     plt.legend()
     plt.grid(True, alpha=0.3)
@@ -231,3 +307,4 @@ def setup_directories():
 if __name__ == '__main__':
     setup_directories()
     main()
+    

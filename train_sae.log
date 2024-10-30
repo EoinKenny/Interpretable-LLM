@@ -1,0 +1,1440 @@
+Created directory: gifs
+Created directory: plots
+Created directory: weights
+Loading checkpoint shards:   0%|                                                                                                            | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|██████████████████████████████████████████████████                                                  | 1/2 [00:01<00:01,  1.10s/it]Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:01<00:00,  1.83it/s]Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:01<00:00,  1.59it/s]
+/home/ubuntu/Interpretable-LLM/./run_train_sae.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+Processing file 1
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 113.25
+Iteration: 623, File: SlimPajama-627B/train/chunk10/example_train_2071.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 2
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.09000000000000001
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 73.78
+Iteration: 1246, File: SlimPajama-627B/train/chunk10/example_train_1227.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 3
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 73.36
+Iteration: 1869, File: SlimPajama-627B/train/chunk10/example_train_2070.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 4
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.08100000000000002
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 78.13
+Iteration: 2492, File: SlimPajama-627B/train/chunk10/example_train_2578.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 5
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 77.10
+Iteration: 3115, File: SlimPajama-627B/train/chunk10/example_train_1074.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 6
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.07290000000000002
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 76.27
+Iteration: 3738, File: SlimPajama-627B/train/chunk10/example_train_1725.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 7
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 74.00
+Iteration: 4361, File: SlimPajama-627B/train/chunk10/example_train_12.jsonl.zst
+Time Elapsed: 0.56s
+Processing file 8
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.06561000000000002
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 70.96
+Iteration: 4984, File: SlimPajama-627B/train/chunk10/example_train_1998.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 9
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 68.91
+Iteration: 5607, File: SlimPajama-627B/train/chunk10/example_train_1032.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 10
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.05904900000000002
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 64.76
+Iteration: 6230, File: SlimPajama-627B/train/chunk10/example_train_194.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 11
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 88.28
+Iteration: 6853, File: SlimPajama-627B/train/chunk10/example_train_2131.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 12
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.05314410000000002
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 68.82
+Iteration: 7476, File: SlimPajama-627B/train/chunk10/example_train_1039.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 13
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 73.34
+Iteration: 8099, File: SlimPajama-627B/train/chunk10/example_train_1097.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 14
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.04782969000000002
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 72.39
+Iteration: 8722, File: SlimPajama-627B/train/chunk10/example_train_1531.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 15
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 71.69
+Iteration: 9345, File: SlimPajama-627B/train/chunk10/example_train_2081.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 16
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.043046721000000024
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 69.24
+Iteration: 9968, File: SlimPajama-627B/train/chunk10/example_train_2036.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 17
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 68.63
+Iteration: 10591, File: SlimPajama-627B/train/chunk10/example_train_1819.jsonl.zst
+Time Elapsed: 0.58s
+Processing file 18
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.03874204890000002
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 66.45
+Iteration: 11214, File: SlimPajama-627B/train/chunk10/example_train_2039.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 19
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 64.59
+Iteration: 11837, File: SlimPajama-627B/train/chunk10/example_train_1533.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 20
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.03486784401000002
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 65.28
+Iteration: 12460, File: SlimPajama-627B/train/chunk10/example_train_2351.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 21
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 62.86
+Iteration: 13083, File: SlimPajama-627B/train/chunk10/example_train_2777.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 22
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.03138105960900001
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 61.12
+Iteration: 13706, File: SlimPajama-627B/train/chunk10/example_train_2265.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 23
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 59.72
+Iteration: 14329, File: SlimPajama-627B/train/chunk10/example_train_242.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 24
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.028242953648100012
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 57.80
+Iteration: 14952, File: SlimPajama-627B/train/chunk10/example_train_2419.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 25
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 56.48
+Iteration: 15575, File: SlimPajama-627B/train/chunk10/example_train_2721.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 26
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.025418658283290013
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 55.75
+Iteration: 16198, File: SlimPajama-627B/train/chunk10/example_train_188.jsonl.zst
+Time Elapsed: 0.33s
+Processing file 27
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 56.23
+Iteration: 16821, File: SlimPajama-627B/train/chunk10/example_train_1243.jsonl.zst
+Time Elapsed: 0.78s
+Processing file 28
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.022876792454961013
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 56.74
+Iteration: 17444, File: SlimPajama-627B/train/chunk10/example_train_1616.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 29
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 55.88
+Iteration: 18067, File: SlimPajama-627B/train/chunk10/example_train_119.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 30
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.020589113209464913
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 53.80
+Iteration: 18690, File: SlimPajama-627B/train/chunk10/example_train_1271.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 31
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 52.98
+Iteration: 19313, File: SlimPajama-627B/train/chunk10/example_train_2123.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 32
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.01853020188851842
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 56.65
+Iteration: 19936, File: SlimPajama-627B/train/chunk10/example_train_2530.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 33
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 58.43
+Iteration: 20559, File: SlimPajama-627B/train/chunk10/example_train_2180.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 34
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.01667718169966658
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 51.21
+Iteration: 21182, File: SlimPajama-627B/train/chunk10/example_train_173.jsonl.zst
+Time Elapsed: 0.32s
+Processing file 35
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 52.38
+Iteration: 21805, File: SlimPajama-627B/train/chunk10/example_train_1128.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 36
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.015009463529699923
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 52.32
+Iteration: 22428, File: SlimPajama-627B/train/chunk10/example_train_2284.jsonl.zst
+Time Elapsed: 0.32s
+Processing file 37
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 51.98
+Iteration: 23051, File: SlimPajama-627B/train/chunk10/example_train_1915.jsonl.zst
+Time Elapsed: 0.61s
+Processing file 38
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.013508517176729932
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 51.44
+Iteration: 23674, File: SlimPajama-627B/train/chunk10/example_train_1784.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 39
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 72.36
+Iteration: 24297, File: SlimPajama-627B/train/chunk10/example_train_1276.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 40
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.01215766545905694
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 50.78
+Iteration: 24920, File: SlimPajama-627B/train/chunk10/example_train_130.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 41
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 43.91
+Iteration: 25543, File: SlimPajama-627B/train/chunk10/example_train_2618.jsonl.zst
+Time Elapsed: 0.32s
+Processing file 42
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.010941898913151246
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 50.72
+Iteration: 26166, File: SlimPajama-627B/train/chunk10/example_train_2371.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 43
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 49.66
+Iteration: 26789, File: SlimPajama-627B/train/chunk10/example_train_2634.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 44
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.009847709021836121
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 50.22
+Iteration: 27412, File: SlimPajama-627B/train/chunk10/example_train_2430.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 45
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 44.76
+Iteration: 28035, File: SlimPajama-627B/train/chunk10/example_train_1827.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 46
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00886293811965251
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 42.60
+Iteration: 28658, File: SlimPajama-627B/train/chunk10/example_train_1289.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 47
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 42.56
+Iteration: 29281, File: SlimPajama-627B/train/chunk10/example_train_2660.jsonl.zst
+Time Elapsed: 0.62s
+Processing file 48
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.007976644307687259
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 42.70
+Iteration: 29904, File: SlimPajama-627B/train/chunk10/example_train_133.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 49
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 42.87
+Iteration: 30527, File: SlimPajama-627B/train/chunk10/example_train_2610.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 50
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.007178979876918534
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 41.99
+Iteration: 31150, File: SlimPajama-627B/train/chunk10/example_train_1240.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 51
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 42.32
+Iteration: 31773, File: SlimPajama-627B/train/chunk10/example_train_2744.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 52
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.006461081889226681
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 42.04
+Iteration: 32396, File: SlimPajama-627B/train/chunk10/example_train_1274.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 53
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 42.06
+Iteration: 33019, File: SlimPajama-627B/train/chunk10/example_train_1258.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 54
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.005814973700304013
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 41.39
+Iteration: 33642, File: SlimPajama-627B/train/chunk10/example_train_2722.jsonl.zst
+Time Elapsed: 0.32s
+Processing file 55
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 41.31
+Iteration: 34265, File: SlimPajama-627B/train/chunk10/example_train_2507.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 56
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.005233476330273611
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 44.47
+Iteration: 34888, File: SlimPajama-627B/train/chunk10/example_train_1633.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 57
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 41.26
+Iteration: 35511, File: SlimPajama-627B/train/chunk10/example_train_2209.jsonl.zst
+Time Elapsed: 0.63s
+Processing file 58
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00471012869724625
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 41.05
+Iteration: 36134, File: SlimPajama-627B/train/chunk10/example_train_1606.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 59
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 41.17
+Iteration: 36757, File: SlimPajama-627B/train/chunk10/example_train_2732.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 60
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.004239115827521626
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.63
+Iteration: 37380, File: SlimPajama-627B/train/chunk10/example_train_1622.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 61
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.69
+Iteration: 38003, File: SlimPajama-627B/train/chunk10/example_train_200.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 62
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0038152042447694634
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.26
+Iteration: 38626, File: SlimPajama-627B/train/chunk10/example_train_2040.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 63
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.85
+Iteration: 39249, File: SlimPajama-627B/train/chunk10/example_train_1965.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 64
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.003433683820292517
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.50
+Iteration: 39872, File: SlimPajama-627B/train/chunk10/example_train_1717.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 65
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.81
+Iteration: 40495, File: SlimPajama-627B/train/chunk10/example_train_2125.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 66
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0030903154382632653
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 41.02
+Iteration: 41118, File: SlimPajama-627B/train/chunk10/example_train_2237.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 67
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.64
+Iteration: 41741, File: SlimPajama-627B/train/chunk10/example_train_1561.jsonl.zst
+Time Elapsed: 0.64s
+Processing file 68
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.002781283894436939
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.72
+Iteration: 42364, File: SlimPajama-627B/train/chunk10/example_train_1321.jsonl.zst
+Time Elapsed: 0.49s
+Processing file 69
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.73
+Iteration: 42987, File: SlimPajama-627B/train/chunk10/example_train_1043.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 70
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.002503155504993245
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.57
+Iteration: 43610, File: SlimPajama-627B/train/chunk10/example_train_1926.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 71
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.52
+Iteration: 44233, File: SlimPajama-627B/train/chunk10/example_train_1156.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 72
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0022528399544939205
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.06
+Iteration: 44856, File: SlimPajama-627B/train/chunk10/example_train_1422.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 73
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.13
+Iteration: 45479, File: SlimPajama-627B/train/chunk10/example_train_1446.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 74
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0020275559590445286
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.03
+Iteration: 46102, File: SlimPajama-627B/train/chunk10/example_train_1540.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 75
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.93
+Iteration: 46725, File: SlimPajama-627B/train/chunk10/example_train_1646.jsonl.zst
+Time Elapsed: 0.32s
+Processing file 76
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0018248003631400759
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.01
+Iteration: 47348, File: SlimPajama-627B/train/chunk10/example_train_2725.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 77
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.82
+Iteration: 47971, File: SlimPajama-627B/train/chunk10/example_train_1744.jsonl.zst
+Time Elapsed: 0.64s
+Processing file 78
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0016423203268260682
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.09
+Iteration: 48594, File: SlimPajama-627B/train/chunk10/example_train_1314.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 79
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.91
+Iteration: 49217, File: SlimPajama-627B/train/chunk10/example_train_221.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 80
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0014780882941434613
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.99
+Iteration: 49840, File: SlimPajama-627B/train/chunk10/example_train_2406.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 81
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.91
+Iteration: 50463, File: SlimPajama-627B/train/chunk10/example_train_1801.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 82
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0013302794647291152
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.54
+Iteration: 51086, File: SlimPajama-627B/train/chunk10/example_train_1401.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 83
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.59
+Iteration: 51709, File: SlimPajama-627B/train/chunk10/example_train_1577.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 84
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0011972515182562037
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.73
+Iteration: 52332, File: SlimPajama-627B/train/chunk10/example_train_1909.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 85
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.50
+Iteration: 52955, File: SlimPajama-627B/train/chunk10/example_train_272.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 86
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0010775263664305832
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.44
+Iteration: 53578, File: SlimPajama-627B/train/chunk10/example_train_128.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 87
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.58
+Iteration: 54201, File: SlimPajama-627B/train/chunk10/example_train_1405.jsonl.zst
+Time Elapsed: 0.64s
+Processing file 88
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.000969773729787525
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.47
+Iteration: 54824, File: SlimPajama-627B/train/chunk10/example_train_1994.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 89
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.50
+Iteration: 55447, File: SlimPajama-627B/train/chunk10/example_train_1662.jsonl.zst
+Time Elapsed: 0.33s
+Processing file 90
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0008727963568087724
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.57
+Iteration: 56070, File: SlimPajama-627B/train/chunk10/example_train_233.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 91
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.70
+Iteration: 56693, File: SlimPajama-627B/train/chunk10/example_train_1517.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 92
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0007855167211278952
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.47
+Iteration: 57316, File: SlimPajama-627B/train/chunk10/example_train_1162.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 93
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 41.63
+Iteration: 57939, File: SlimPajama-627B/train/chunk10/example_train_1125.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 94
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0007069650490151057
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.45
+Iteration: 58562, File: SlimPajama-627B/train/chunk10/example_train_1049.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 95
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.52
+Iteration: 59185, File: SlimPajama-627B/train/chunk10/example_train_197.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 96
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0006362685441135952
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.18
+Iteration: 59808, File: SlimPajama-627B/train/chunk10/example_train_1910.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 97
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.37
+Iteration: 60431, File: SlimPajama-627B/train/chunk10/example_train_2306.jsonl.zst
+Time Elapsed: 0.66s
+Processing file 98
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0005726416897022357
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.50
+Iteration: 61054, File: SlimPajama-627B/train/chunk10/example_train_2285.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 99
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.51
+Iteration: 61677, File: SlimPajama-627B/train/chunk10/example_train_1507.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 100
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0005153775207320121
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.35
+Iteration: 62300, File: SlimPajama-627B/train/chunk10/example_train_2480.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 101
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 41.63
+Iteration: 62923, File: SlimPajama-627B/train/chunk10/example_train_1728.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 102
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00046383976865881093
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.06
+Iteration: 63546, File: SlimPajama-627B/train/chunk10/example_train_1593.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 103
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.39
+Iteration: 64169, File: SlimPajama-627B/train/chunk10/example_train_2102.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 104
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00041745579179292984
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.44
+Iteration: 64792, File: SlimPajama-627B/train/chunk10/example_train_1740.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 105
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 44.79
+Iteration: 65415, File: SlimPajama-627B/train/chunk10/example_train_1936.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 106
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00037571021261363684
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.85
+Iteration: 66038, File: SlimPajama-627B/train/chunk10/example_train_2408.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 107
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.13
+Iteration: 66661, File: SlimPajama-627B/train/chunk10/example_train_2497.jsonl.zst
+Time Elapsed: 0.86s
+Processing file 108
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00033813919135227316
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.38
+Iteration: 67284, File: SlimPajama-627B/train/chunk10/example_train_1345.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 109
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.45
+Iteration: 67907, File: SlimPajama-627B/train/chunk10/example_train_1441.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 110
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00030432527221704587
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.14
+Iteration: 68530, File: SlimPajama-627B/train/chunk10/example_train_1812.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 111
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.39
+Iteration: 69153, File: SlimPajama-627B/train/chunk10/example_train_2246.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 112
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00027389274499534127
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.50
+Iteration: 69776, File: SlimPajama-627B/train/chunk10/example_train_1438.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 113
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.19
+Iteration: 70399, File: SlimPajama-627B/train/chunk10/example_train_2314.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 114
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00024650347049580716
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.29
+Iteration: 71022, File: SlimPajama-627B/train/chunk10/example_train_2577.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 115
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.75
+Iteration: 71645, File: SlimPajama-627B/train/chunk10/example_train_1763.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 116
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00022185312344622646
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.14
+Iteration: 72268, File: SlimPajama-627B/train/chunk10/example_train_1575.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 117
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.14
+Iteration: 72891, File: SlimPajama-627B/train/chunk10/example_train_2644.jsonl.zst
+Time Elapsed: 0.73s
+Processing file 118
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00019966781110160382
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.21
+Iteration: 73514, File: SlimPajama-627B/train/chunk10/example_train_18.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 119
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.42
+Iteration: 74137, File: SlimPajama-627B/train/chunk10/example_train_2097.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 120
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00017970102999144343
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.17
+Iteration: 74760, File: SlimPajama-627B/train/chunk10/example_train_1238.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 121
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.26
+Iteration: 75383, File: SlimPajama-627B/train/chunk10/example_train_1748.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 122
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0001617309269922991
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.08
+Iteration: 76006, File: SlimPajama-627B/train/chunk10/example_train_2675.jsonl.zst
+Time Elapsed: 0.33s
+Processing file 123
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.18
+Iteration: 76629, File: SlimPajama-627B/train/chunk10/example_train_2352.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 124
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.0001455578342930692
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.20
+Iteration: 77252, File: SlimPajama-627B/train/chunk10/example_train_1543.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 125
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.20
+Iteration: 77875, File: SlimPajama-627B/train/chunk10/example_train_2302.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 126
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00013100205086376228
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.43
+Iteration: 78498, File: SlimPajama-627B/train/chunk10/example_train_2054.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 127
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.45
+Iteration: 79121, File: SlimPajama-627B/train/chunk10/example_train_2603.jsonl.zst
+Time Elapsed: 0.69s
+Processing file 128
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00011790184577738606
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.56
+Iteration: 79744, File: SlimPajama-627B/train/chunk10/example_train_2377.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 129
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.39
+Iteration: 80367, File: SlimPajama-627B/train/chunk10/example_train_1231.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 130
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 0.00010611166119964746
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.21
+Iteration: 80990, File: SlimPajama-627B/train/chunk10/example_train_1008.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 131
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.17
+Iteration: 81613, File: SlimPajama-627B/train/chunk10/example_train_2543.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 132
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 9.550049507968271e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.98
+Iteration: 82236, File: SlimPajama-627B/train/chunk10/example_train_224.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 133
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.16
+Iteration: 82859, File: SlimPajama-627B/train/chunk10/example_train_1747.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 134
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 8.595044557171444e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.10
+Iteration: 83482, File: SlimPajama-627B/train/chunk10/example_train_2282.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 135
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.20
+Iteration: 84105, File: SlimPajama-627B/train/chunk10/example_train_1696.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 136
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 7.7355401014543e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.17
+Iteration: 84728, File: SlimPajama-627B/train/chunk10/example_train_2006.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 137
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.09
+Iteration: 85351, File: SlimPajama-627B/train/chunk10/example_train_1702.jsonl.zst
+Time Elapsed: 0.87s
+Processing file 138
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 6.96198609130887e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.13
+Iteration: 85974, File: SlimPajama-627B/train/chunk10/example_train_2737.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 139
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.13
+Iteration: 86597, File: SlimPajama-627B/train/chunk10/example_train_1331.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 140
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 6.265787482177983e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.25
+Iteration: 87220, File: SlimPajama-627B/train/chunk10/example_train_2739.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 141
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.33
+Iteration: 87843, File: SlimPajama-627B/train/chunk10/example_train_1061.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 142
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 5.639208733960185e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.08
+Iteration: 88466, File: SlimPajama-627B/train/chunk10/example_train_1882.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 143
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.67
+Iteration: 89089, File: SlimPajama-627B/train/chunk10/example_train_2624.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 144
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 5.075287860564167e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.17
+Iteration: 89712, File: SlimPajama-627B/train/chunk10/example_train_1393.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 145
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 38.80
+Iteration: 90335, File: SlimPajama-627B/train/chunk10/example_train_1353.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 146
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 4.5677590745077506e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.14
+Iteration: 90958, File: SlimPajama-627B/train/chunk10/example_train_2842.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 147
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 38.83
+Iteration: 91581, File: SlimPajama-627B/train/chunk10/example_train_1198.jsonl.zst
+Time Elapsed: 0.69s
+Processing file 148
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 4.1109831670569756e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.25
+Iteration: 92204, File: SlimPajama-627B/train/chunk10/example_train_1556.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 149
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.42
+Iteration: 92827, File: SlimPajama-627B/train/chunk10/example_train_2151.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 150
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 3.699884850351278e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.25
+Iteration: 93450, File: SlimPajama-627B/train/chunk10/example_train_2614.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 151
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.41
+Iteration: 94073, File: SlimPajama-627B/train/chunk10/example_train_2047.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 152
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 3.3298963653161505e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.40
+Iteration: 94696, File: SlimPajama-627B/train/chunk10/example_train_1908.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 153
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.97
+Iteration: 95319, File: SlimPajama-627B/train/chunk10/example_train_210.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 154
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 2.9969067287845354e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 40.40
+Iteration: 95942, File: SlimPajama-627B/train/chunk10/example_train_1313.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 155
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.21
+Iteration: 96565, File: SlimPajama-627B/train/chunk10/example_train_2494.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 156
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 2.697216055906082e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.22
+Iteration: 97188, File: SlimPajama-627B/train/chunk10/example_train_267.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 157
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.30
+Iteration: 97811, File: SlimPajama-627B/train/chunk10/example_train_2146.jsonl.zst
+Time Elapsed: 0.72s
+Processing file 158
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 2.427494450315474e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.41
+Iteration: 98434, File: SlimPajama-627B/train/chunk10/example_train_1195.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 159
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.07
+Iteration: 99057, File: SlimPajama-627B/train/chunk10/example_train_2205.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 160
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 2.1847450052839264e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.37
+Iteration: 99680, File: SlimPajama-627B/train/chunk10/example_train_2435.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 161
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.18
+Iteration: 100303, File: SlimPajama-627B/train/chunk10/example_train_1052.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 162
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1.9662705047555338e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.11
+Iteration: 100926, File: SlimPajama-627B/train/chunk10/example_train_1501.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 163
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.26
+Iteration: 101549, File: SlimPajama-627B/train/chunk10/example_train_2350.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 164
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1.7696434542799806e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.80
+Iteration: 102172, File: SlimPajama-627B/train/chunk10/example_train_2536.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 165
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 41.79
+Iteration: 102795, File: SlimPajama-627B/train/chunk10/example_train_1034.jsonl.zst
+Time Elapsed: 0.34s
+Processing file 166
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1.5926791088519825e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.97
+Iteration: 103418, File: SlimPajama-627B/train/chunk10/example_train_2591.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 167
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.26
+Iteration: 104041, File: SlimPajama-627B/train/chunk10/example_train_1849.jsonl.zst
+Time Elapsed: 0.71s
+Processing file 168
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1.4334111979667843e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.25
+Iteration: 104664, File: SlimPajama-627B/train/chunk10/example_train_1602.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 169
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.10
+Iteration: 105287, File: SlimPajama-627B/train/chunk10/example_train_2672.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 170
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1.2900700781701059e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.68
+Iteration: 105910, File: SlimPajama-627B/train/chunk10/example_train_1038.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 171
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.20
+Iteration: 106533, File: SlimPajama-627B/train/chunk10/example_train_2118.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 172
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1.1610630703530954e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.19
+Iteration: 107156, File: SlimPajama-627B/train/chunk10/example_train_1769.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 173
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.32
+Iteration: 107779, File: SlimPajama-627B/train/chunk10/example_train_1951.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 174
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1.0449567633177859e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.22
+Iteration: 108402, File: SlimPajama-627B/train/chunk10/example_train_1979.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 175
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.47
+Iteration: 109025, File: SlimPajama-627B/train/chunk10/example_train_1524.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 176
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.36
+Iteration: 109648, File: SlimPajama-627B/train/chunk10/example_train_2391.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 177
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 38.90
+Iteration: 110271, File: SlimPajama-627B/train/chunk10/example_train_1299.jsonl.zst
+Time Elapsed: 0.92s
+Processing file 178
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.26
+Iteration: 110894, File: SlimPajama-627B/train/chunk10/example_train_181.jsonl.zst
+Time Elapsed: 0.48s
+Processing file 179
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.10
+Iteration: 111517, File: SlimPajama-627B/train/chunk10/example_train_2168.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 180
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.93
+Iteration: 112140, File: SlimPajama-627B/train/chunk10/example_train_2107.jsonl.zst
+Time Elapsed: 0.33s
+Processing file 181
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.37
+Iteration: 112763, File: SlimPajama-627B/train/chunk10/example_train_1738.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 182
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.50
+Iteration: 113386, File: SlimPajama-627B/train/chunk10/example_train_1225.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 183
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.27
+Iteration: 114009, File: SlimPajama-627B/train/chunk10/example_train_1425.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 184
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 38.93
+Iteration: 114632, File: SlimPajama-627B/train/chunk10/example_train_2730.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 185
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.04
+Iteration: 115255, File: SlimPajama-627B/train/chunk10/example_train_1304.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 186
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.33
+Iteration: 115878, File: SlimPajama-627B/train/chunk10/example_train_2490.jsonl.zst
+Time Elapsed: 0.29s
+Processing file 187
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.39
+Iteration: 116501, File: SlimPajama-627B/train/chunk10/example_train_1940.jsonl.zst
+Time Elapsed: 0.73s
+Processing file 188
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.04
+Iteration: 117124, File: SlimPajama-627B/train/chunk10/example_train_2229.jsonl.zst
+Time Elapsed: 0.31s
+Processing file 189
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.27
+Iteration: 117747, File: SlimPajama-627B/train/chunk10/example_train_2556.jsonl.zst
+Time Elapsed: 0.33s
+Processing file 190
+DF Shape: (9980, 2), Text batches: 623
+Learning rate updated to 1e-05
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.27
+Iteration: 118370, File: SlimPajama-627B/train/chunk10/example_train_1637.jsonl.zst
+Time Elapsed: 0.30s
+Processing file 191
+DF Shape: (9980, 2), Text batches: 623
+
+Sparsity Loss: 0.00
+Reconstruction Loss: 39.30
+Iteration: 118993, File: SlimPajama-627B/train/chunk10/example_train_139.jsonl.zst
+Time Elapsed: 0.32s
+Processing file 192
+DF Shape: (9980, 2), Text batches: 623
