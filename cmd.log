@@ -1,0 +1,36 @@
+Loading checkpoint shards:   0%|                                                                                                                               | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███████████████████████████████████████▋                                                                               | 1/3 [00:00<00:01,  1.50it/s]Loading checkpoint shards:  67%|███████████████████████████████████████████████████████████████████████████████▎                                       | 2/3 [00:01<00:00,  1.48it/s]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  2.18it/s]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  1.94it/s]
+/home/ubuntu/Interpretable-LLM/./main.py:194: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+Processing file 2
+DF Shape: (9980, 2), Text batches: 2495
+Current file: 1
+Learning rate updated to 0.09000000000000001
+Current batch: 100  -- Avg Time: 0.6909741783142089
+Learning rate updated to 0.08100000000000002
+Current batch: 200  -- Avg Time: 0.6876140379905701
+Learning rate updated to 0.07290000000000002
+Current batch: 300  -- Avg Time: 0.6947053511937459
+Learning rate updated to 0.06561000000000002
+Current batch: 400  -- Avg Time: 0.7056956619024277
+Learning rate updated to 0.05904900000000002
+Current batch: 500  -- Avg Time: 0.7007785415649415
+Learning rate updated to 0.05314410000000002
+Current batch: 600  -- Avg Time: 0.7037588675816854
+Learning rate updated to 0.04782969000000002
+Current batch: 700  -- Avg Time: 0.7013895729609898
+Learning rate updated to 0.043046721000000024
+Current batch: 800  -- Avg Time: 0.696731163263321
+Learning rate updated to 0.03874204890000002
+Current batch: 900  -- Avg Time: 0.6986675243907504
+Learning rate updated to 0.03486784401000002
+Current batch: 1000  -- Avg Time: 0.7005676116943359
+Learning rate updated to 0.03138105960900001
+Current batch: 1100  -- Avg Time: 0.6985660141164606
+Learning rate updated to 0.028242953648100012
+Current batch: 1200  -- Avg Time: 0.7004871014753977
+Learning rate updated to 0.025418658283290013
+Current batch: 1300  -- Avg Time: 0.6962683452092684
+Learning rate updated to 0.022876792454961013
+Current batch: 1400  -- Avg Time: 0.6958668802465712
+Learning rate updated to 0.020589113209464913
+Current batch: 1500  -- Avg Time: 0.6966559802691141
