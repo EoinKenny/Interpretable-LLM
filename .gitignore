@@ -8,3 +8,6 @@ datasets/
 __pycache__/
 .ipynb_checkpoints/
 SlimPajama-627B/
+plots/
+*.ipynb
+*.log
